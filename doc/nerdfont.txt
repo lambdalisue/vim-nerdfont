@@ -1,0 +1,186 @@
+*nerdfont.txt*				A plugin to handle Nerd Fonts
+
+Author:  Alisue <lambdalisue@hashnote.net>
+License: MIT license
+
+=============================================================================
+CONTENTS						*nerdfont-contents*
+
+INTRODUCTION				|nerdfont-introduction|
+USAGE					|nerdfont-usage|
+INTERFACE				|nerdfont-interface|
+  VARIABLE				|nerdfont-variable|
+  FUNCTION				|nerdfont-function|
+
+
+=============================================================================
+INTRODUCTION						*nerdfont-introduction*
+
+*nerdfont.vim* (nerdfont) is a plugin to handle Nerd Fonts [1].
+It is like a simplified version of vim-devicons [2]. It does not provide any
+3rd party integrations in itself. Any 3rd party integrations will be released
+as cooperate plugins.
+
+[1] https://github.com/ryanoasis/nerd-fonts
+[2] https://github.com/ryanoasis/vim-devicons
+
+Most of glyph mappings has copied from vim-devicons.
+
+
+=============================================================================
+USAGE							*nerdfont-usage*
+
+Use |nerdfont#find()| function to find a filetype glyph of a current buffer
+like WebDevIconsGetFileTypeSymbol() function in vim-devicons.
+
+Use |nerdfont#fileformat#find()| function to find fileformat of a current
+buffer like WebDevIconsGetFileFormatSymbol() function in vim-devicons.
+
+Users can use above functions to show current status in 'statusline' like:
+>
+	set statusline=%f\ %{nerdfont#find()}\ %{nerdfont#fileformat#find()}
+<
+See |nerdfont-function| for more details.
+
+
+=============================================================================
+INTERFACE						*nerdfont-interface*
+
+-----------------------------------------------------------------------------
+VARIABLE						*nerdfont-variable*
+
+*g:nerdfont#directory#customs*
+	A custom glyph mappings for directory.
+>
+	let g:nerdfont#directory#customs = {
+	      \ '': 'glyph for default directory',
+	      \ 'open': 'glyph for open directory',
+	      \ 'close': 'glyph for close directory',
+	      \ 'symlink': 'glyph for symlink directory',
+	      \}
+<
+*g:nerdfont#fileformat#customs*
+	A custom glyph mappings for fileformat.
+>
+	let g:nerdfont#fileformat#customs = {
+	      \ 'dos': 'glyph for dos',
+	      \ 'mac': 'glyph for mac',
+	      \ 'unix': 'glyph for unix',
+	      \}
+<
+*g:nerdfont#path#default*
+	A custom glyph for path.
+>
+	let g:nerdfont#path#custom = 'glyph for default path'
+<
+*g:nerdfont#platform#customs*
+	A custom glyph mappings for platform.
+>
+	let g:nerdfont#platform#customs = {
+	      \ 'windows': 'glyph for Windows',
+	      \ 'macos': 'glyph for macOS',
+	      \ 'linux': 'glyph for Linux',
+	      \ 'arch': 'glyph for Arch Linux',
+	      \ 'ubuntu': 'glyph for Ubuntu',
+	      \ 'debian': 'glyph for Debian',
+	      \ 'centos': 'glyph for CentOS',
+	      \ 'docker': 'glyph for Docker',
+	      \}
+<
+*g:nerdfont#path#basename#customs*
+	A custom glyph mappings for basename match.
+>
+	let g:nerdfont#path#basename#customs = {
+	      \ 'dockerfile': 'glyph for dockerfile',
+	      \ 'Makefile': 'glyph for Makefile',
+	      \}
+<
+*g:nerdfont#path#extension#customs*
+	A custom glyph mappings for extension match.
+>
+	let g:nerdfont#path#extension#customs = {
+	      \ 'js': 'glyph for .js',
+	      \ 'rb': 'glyph for .rb',
+	      \}
+<
+*g:nerdfont#path#pattern#customs*
+	A custom glyph mappings for pattern match.
+>
+	let g:nerdfont#path#pattern#customs = {
+	      \ '.*/dockerfiles/[^.]*$': 'glyph for files under dockerfiles',
+	      \}
+<
+-----------------------------------------------------------------------------
+FUNCTION						*nerdfont-function*
+
+						*nerdfont#find()*
+nerdfont#find([{path}][, {isdir}])
+	Return a glyph (|String|) of a given {path} (|String|) or directory if
+	{isdir} (|Boolean|) is not "auto" and truly.
+	When {isdir} is omitted or the value is "auto", |isdirectory()| has
+	called with the given {path} and the result is used.
+	When {path} is omitted, a name of the current buffer is used.
+
+	For example:
+>
+	echo nerdfont#find()
+	" 
+	echo nerdfont#find('hello.rb')
+	" 
+	echo nerdfont#find('hello', 1)
+	" 
+<
+						*nerdfont#directory#find()*
+nerdfont#directory#find([{state}])
+	Return a glyph (|String|) of a given {state} directory. The following
+	state is available in default set
+
+        State		Description~
+	""		Default directory
+	"open"		Opend directory
+	"close"		Closed directory
+	"symlink"	Symlinked directory
+
+	For example:
+>
+	echo nerdfont#directory#find()
+	" 
+	echo nerdfont#directory#find('open')
+	" 
+<
+						*nerdfont#fileformat#find()*
+nerdfont#fileformat#find([{fileformat}])
+	Return a glyph (|String|) of a given {fileformat}.  If {fileformat} is
+	omitted, 'fileformat' of the current buffer is used instead.
+
+						*nerdfont#path#find()*
+nerdfont#path#find({path}, [{options}])
+	Return a glyph (|String|) of a given {path}. The following attributes
+	are available on {options}.
+
+	"disable_pattern"	|Boolean| to disable pattern match
+	"disable_basename"	|Boolean| to disable basename match
+	"disable_extension"	|Boolean| to disable extension match
+
+						*nerdfont#path#clear_cache()*
+nerdfont#platform#find([{platform}])
+	Return a glyph (|String|) of a given {platform}. If {platform} is
+	omitted, the running platform will be automatically detected.
+	The following platform is available in default set.
+
+	Platform		Description~
+	"windows"		Windows
+	"macos"			macOS
+	"arch"			Arch Linux
+	"ubuntu"		Ubuntu
+	"debian"		Debian
+	"centos"		CentOS
+	"docker"		Docker container
+	"linux"			Other linux/unix
+
+	Note that it internally call "lsb_release -i" to detect linux
+	distribution if needed and the result is cached.
+
+
+=============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
