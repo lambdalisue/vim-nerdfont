@@ -1,12 +1,12 @@
 let g:nerdfont#path#pattern#customs = get(g:, 'nerdfont#path#pattern#customs', {})
 let g:nerdfont#path#pattern#defaults = {
-      \ '.*jquery.*\.js$'       : '',
       \ '.*angular.*\.js$'      : '',
       \ '.*backbone.*\.js$'     : '',
-      \ '.*require.*\.js$'      : '',
-      \ '.*materialize.*\.js$'  : '',
+      \ '.*jquery.*\.js$'       : '',
       \ '.*materialize.*\.css$' : '',
+      \ '.*materialize.*\.js$'  : '',
       \ '.*mootools.*\.js$'     : '',
+      \ '.*require.*\.js$'      : '',
       \ '.*vimrc.*'             : '',
       \ 'Vagrantfile$'          : '',
       \}
