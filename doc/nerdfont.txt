@@ -49,6 +49,11 @@ INTERFACE						*nerdfont-interface*
 -----------------------------------------------------------------------------
 VARIABLE						*nerdfont-variable*
 
+*g:nerdfont#default*
+	A default glyph.
+>
+	let g:nerdfont#default = 'glyph for default path'
+<
 *g:nerdfont#directory#customs*
 	A custom glyph mappings for directory.
 >
@@ -115,10 +120,20 @@ FUNCTION						*nerdfont-function*
 
 						*nerdfont#find()*
 nerdfont#find([{path}][, {isdir}])
-	Return a glyph (|String|) of a given {path} (|String|) or directory if
-	{isdir} (|Boolean|) is not "auto" and truly.
-	When {isdir} is omitted or the value is "auto", |isdirectory()| has
-	called with the given {path} and the result is used.
+	Return a glyph (|String|) of a given {path} (|String|).
+
+	It sequentically tries following functions and fallback to
+	|g:nerdfont#default| to find a suitable glyph.
+
+	1. |nerdfont#path#pattern#find()|
+	2. |nerdfont#path#basename#find()|
+	3. |nerdfont#directory#find()| if {isdir} is truthy value
+	4. |nerdfont#path#extension#find()| if {isdir} is falsy value
+
+	When {isdir} is omitted or "auto", |isdirectory()| function is used to
+	determine if the given {path} is directory or not prior to step 3.
+	When {isdir} is non empty |String|, the value is passed to the
+	|nerdfont#directory#find()| as a {state} of a directory.
 	When {path} is omitted, a name of the current buffer is used.
 
 	For example:
@@ -129,6 +144,8 @@ nerdfont#find([{path}][, {isdir}])
 	" 
 	echo nerdfont#find('hello', 1)
 	" 
+	echo nerdfont#find('hello', 'open')
+	" 
 <
 						*nerdfont#directory#find()*
 nerdfont#directory#find([{state}])
