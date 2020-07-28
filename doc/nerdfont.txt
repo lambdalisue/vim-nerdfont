@@ -165,6 +165,18 @@ nerdfont#fileformat#find([{fileformat}])
 	Return a glyph (|String|) of a given {fileformat}.  If {fileformat} is
 	omitted, 'fileformat' of the current buffer is used instead.
 
+					*nerdfont#path#basename#find()*
+nerdfont#path#basename#find({path})
+	Return a glyph (|String|) of a given {path} by matching basename.
+
+					*nerdfont#path#extension#find()*
+nerdfont#path#extension#find({path})
+	Return a glyph (|String|) of a given {path} by matching extension.
+
+					*nerdfont#path#pattern#find()*
+nerdfont#path#pattern#find({path})
+	Return a glyph (|String|) of a given {path} by matching pattern.
+
 						*nerdfont#path#clear_cache()*
 nerdfont#platform#find([{platform}])
 	Return a glyph (|String|) of a given {platform}. If {platform} is
