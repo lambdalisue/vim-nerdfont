@@ -73,11 +73,6 @@ VARIABLE						*nerdfont-variable*
 	      \ 'unix': 'glyph for unix',
 	      \}
 <
-*g:nerdfont#path#default*
-	A custom glyph for path.
->
-	let g:nerdfont#path#custom = 'glyph for default path'
-<
 *g:nerdfont#platform#customs*
 	A custom glyph mappings for platform.
 >
@@ -169,15 +164,6 @@ nerdfont#directory#find([{state}])
 nerdfont#fileformat#find([{fileformat}])
 	Return a glyph (|String|) of a given {fileformat}.  If {fileformat} is
 	omitted, 'fileformat' of the current buffer is used instead.
-
-						*nerdfont#path#find()*
-nerdfont#path#find({path}, [{options}])
-	Return a glyph (|String|) of a given {path}. The following attributes
-	are available on {options}.
-
-	"disable_pattern"	|Boolean| to disable pattern match
-	"disable_basename"	|Boolean| to disable basename match
-	"disable_extension"	|Boolean| to disable extension match
 
 						*nerdfont#path#clear_cache()*
 nerdfont#platform#find([{platform}])
