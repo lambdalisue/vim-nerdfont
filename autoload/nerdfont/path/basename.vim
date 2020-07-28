@@ -36,7 +36,7 @@ let g:nerdfont#path#basename#defaults = {
       \}
 
 function! nerdfont#path#basename#find(path) abort
-  let n = fnamemodify(a:path, ':t')
+  let n = tolower(fnamemodify(a:path, ':t'))
   return get(s:m, n, '')
 endfunction
 

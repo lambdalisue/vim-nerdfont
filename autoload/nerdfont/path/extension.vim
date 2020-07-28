@@ -119,7 +119,7 @@ let g:nerdfont#path#extension#defaults = {
       \}
 
 function! nerdfont#path#extension#find(path) abort
-  let n = fnamemodify(a:path, ':e')
+  let n = tolower(fnamemodify(a:path, ':e'))
   return get(s:m, n, '')
 endfunction
 
