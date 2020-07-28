@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#path#basename#customs = get(g:, 'nerdfont#path#basename#customs', {})
 let g:nerdfont#path#basename#defaults = {
       \ '.bashprofile'                     : '',

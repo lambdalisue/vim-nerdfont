@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#fileformat#customs = get(g:, 'nerdfont#fileformat#customs', {})
 let g:nerdfont#fileformat#defaults = {
       \ 'dos': '',

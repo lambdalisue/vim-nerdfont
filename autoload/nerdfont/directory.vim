@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#directory#customs = get(g:, 'nerdfont#directory#customs', {})
 let g:nerdfont#directory#defaults = {
       \ '': '',

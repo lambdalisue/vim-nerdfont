@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#path#extension#customs = get(g:, 'nerdfont#path#extension#customs', {})
 let g:nerdfont#path#extension#defaults = {
       \ 'ai'       : '',

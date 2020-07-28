@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#platform#customs = get(g:, 'nerdfont#platform#customs', {})
 let g:nerdfont#platform#defaults = {
       \ 'windows': '',

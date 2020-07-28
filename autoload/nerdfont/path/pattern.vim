@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:nerdfont#path#pattern#customs = get(g:, 'nerdfont#path#pattern#customs', {})
 let g:nerdfont#path#pattern#defaults = {
       \ '.*angular.*\.js$'      : '',
