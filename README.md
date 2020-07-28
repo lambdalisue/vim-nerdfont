@@ -56,6 +56,17 @@ If you would like to add new glyph/filetype supports, see the following files
 | Want to add new exact name (e.g. `Makefile`)        | [`autoload/nerdfont/path/basename.vim`](./autoload/nerdfont/path/basename.vim)   |
 | Want to add new complex pattern (e.g. `.*/bin/.*$`) | [`autoload/nerdfont/path/pattern.vim`](./autoload/nerdfont/path/pattern.vim)     |
 
+## Integrations
+
+| Name                           | Description                                                          |
+| ------------------------------ | -------------------------------------------------------------------- |
+| [nerdfont-palette.vim][]       | An universal palette for glyphs in nerdfont.vim/vim-devicons         |
+| [fern-renderer-nerdfont.vim][] | A [fern.vim][] plugin which use nerdfont.vim to provide fancy glyphs |
+
+[nerdfont-palette.vim]: https://github.com/lambdalisue/nerdfont-palette.vim
+[fern-renderer-nerdfont.vim]: https://github.com/lambdalisue/fern-renderer-nerdfont.vim
+[fern.vim]: https://github.com/lambdalisue/fern.vim
+
 ## License
 
 The glyph mappings has copied from [vim-devicons][] thus the part follow the license of [vim-devicons][] ([LICENSE.vim-devicons](./LICENSE.vim-devicon)).
