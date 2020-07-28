@@ -1,0 +1,23 @@
+Describe nerdfont#path#basename
+  Describe #find({path})
+    It returns a gulpfile glyph for 'gulpfile.js'
+      let glyph = nerdfont#path#basename#find('gulpfile.js')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Docker glyph for 'dockerfile'
+      let glyph = nerdfont#path#basename#find('dockerfile')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Key glyph for 'license'
+      let glyph = nerdfont#path#basename#find('license')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an empty string for 'hogehogefoobar'
+      let glyph = nerdfont#path#basename#find('hogehogefoobar')
+      Assert Equals(glyph, '')
+    End
+  End
+End

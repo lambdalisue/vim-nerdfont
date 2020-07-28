@@ -1,0 +1,23 @@
+Describe nerdfont#path#pattern
+  Describe #find({path})
+    It returns a jQuery glyph for 'xxxxxjquery.yyyyy.js'
+      let glyph = nerdfont#path#pattern#find('xxxxxjquery.yyyyy.js')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Angular glyph for 'xxxxxangular.yyyyy.js'
+      let glyph = nerdfont#path#pattern#find('xxxxxangular.yyyyy.js')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Vagrant glyph for 'Vagrantfile'
+      let glyph = nerdfont#path#pattern#find('Vagrantfile')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an empty string for 'hogehogefoobar'
+      let glyph = nerdfont#path#pattern#find('hogehogefoobar')
+      Assert Equals(glyph, '')
+    End
+  End
+End

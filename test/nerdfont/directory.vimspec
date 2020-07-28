@@ -1,0 +1,28 @@
+Describe nerdfont#directory
+  Describe #find({path})
+    It returns a default directory glyph
+      let glyph = nerdfont#directory#find()
+      Assert Equals(glyph, '')
+    End
+
+    It returns an opened directory glyph for 'open'
+      let glyph = nerdfont#directory#find('open')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an closed directory glyph for 'close'
+      let glyph = nerdfont#directory#find('close')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an symlinked directory glyph for 'symlink'
+      let glyph = nerdfont#directory#find('symlink')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an empty string for 'hogehogefoobar'
+      let glyph = nerdfont#directory#find('hogehogefoobar')
+      Assert Equals(glyph, '')
+    End
+  End
+End

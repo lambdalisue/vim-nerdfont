@@ -1,0 +1,23 @@
+Describe nerdfont#platform
+  Describe #find({path})
+    It returns a windows glyph for 'windows'
+      let glyph = nerdfont#platform#find('windows')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an apple glyph for 'macos'
+      let glyph = nerdfont#platform#find('macos')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a linux glyph for 'linux'
+      let glyph = nerdfont#platform#find('linux')
+      Assert Equals(glyph, '')
+    End
+
+    It returns an empty string for 'hogehogefoobar'
+      let glyph = nerdfont#platform#find('hogehogefoobar')
+      Assert Equals(glyph, '')
+    End
+  End
+End
