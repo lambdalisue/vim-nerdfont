@@ -15,6 +15,9 @@ In otherwords, it is a fundemental plugin to handle [Nerd Fonts][] from Vim.
 [vim-devicons]: https://github.com/ryanoasis/vim-devicons
 [nerd fonts]: https://github.com/ryanoasis/nerd-fonts
 
+![](https://user-images.githubusercontent.com/546312/88701008-6c1c5980-d144-11ea-8d6b-d4f4290274a6.png)
+*With fern.vim + fern-renderer-nerdfont.vim. All glyphs above were powered by this plugin*
+
 ## Usage
 
 First of all, make sure one of [Nerd Fonts][] is used in your Vim.
