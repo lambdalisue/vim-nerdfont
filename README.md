@@ -60,10 +60,10 @@ If you would like to add new glyph/filetype supports, see the following files
 
 | Name                           | Description                                                          |
 | ------------------------------ | -------------------------------------------------------------------- |
-| [glyph-palette.vim][]       | An universal palette for glyphs to highlight nicely         |
+| [glyph-palette.vim][]          | An universal palette for glyphs to highlight nicely                  |
 | [fern-renderer-nerdfont.vim][] | A [fern.vim][] plugin which use nerdfont.vim to provide fancy glyphs |
 
-[glypy-palette.vim]: https://github.com/lambdalisue/glyph-palette.vim
+[glyph-palette.vim]: https://github.com/lambdalisue/glyph-palette.vim
 [fern-renderer-nerdfont.vim]: https://github.com/lambdalisue/fern-renderer-nerdfont.vim
 [fern.vim]: https://github.com/lambdalisue/fern.vim
 
