@@ -32,6 +32,7 @@ let g:nerdfont#path#basename#defaults = {
       \ 'makefile'                         : '',
       \ 'mix.lock'                         : '',
       \ 'node_modules'                     : '',
+      \ 'pkgbuild'                         : '',
       \ 'procfile'                         : '',
       \ 'rakefile'                         : '',
       \ 'react.jsx'                        : '',
