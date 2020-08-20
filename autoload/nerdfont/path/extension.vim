@@ -110,7 +110,7 @@ let g:nerdfont#path#extension#defaults = {
       \ 'tsx'      : '',
       \ 'twig'     : '',
       \ 'vim'      : '',
-      \ 'vue'      : '󿵂',
+      \ 'vue'      : '﵂',
       \ 'webmanifest' : '',
       \ 'webp'     : '',
       \ 'xcplayground' : '',
