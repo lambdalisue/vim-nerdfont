@@ -20,6 +20,7 @@ let g:nerdfont#path#extension#defaults = {
       \ 'cs'       : '',
       \ 'csh'      : '',
       \ 'css'      : '',
+      \ 'cr'       : '',
       \ 'cxx'      : '',
       \ 'd'        : '',
       \ 'dart'     : '',
