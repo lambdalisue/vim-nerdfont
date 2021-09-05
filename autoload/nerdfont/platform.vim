@@ -4,6 +4,7 @@ let g:nerdfont#platform#customs = get(g:, 'nerdfont#platform#customs', {})
 let g:nerdfont#platform#defaults = {
       \ 'windows': '',
       \ 'macos': '',
+      \ 'android': '',
       \ 'arch': '',
       \ 'ubuntu': '',
       \ 'centos': '',
@@ -27,6 +28,11 @@ function! s:find_platform() abort
   endif
   if has('mac') || has('macunix')
     let s:platform = 'macos'
+    return s:platform
+  endif
+  " https://wiki.termux.com/wiki/Differences_from_Linux
+  if $PREFIX ==# '/data/data/com.termux/files/usr'
+    let s:platform = 'android'
     return s:platform
   endif
   let s:platform = s:find_distro()
