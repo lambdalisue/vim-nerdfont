@@ -5,6 +5,7 @@ let g:nerdfont#platform#defaults = {
       \ 'windows': '',
       \ 'macos': '',
       \ 'arch': '',
+      \ 'gentoo': '',
       \ 'ubuntu': '',
       \ 'centos': '',
       \ 'debian': '',
