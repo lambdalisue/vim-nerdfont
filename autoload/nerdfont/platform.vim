@@ -1,18 +1,5 @@
-scriptencoding utf-8
-
 let g:nerdfont#platform#customs = get(g:, 'nerdfont#platform#customs', {})
-let g:nerdfont#platform#defaults = {
-      \ 'windows': '',
-      \ 'macos': '',
-      \ 'android': '',
-      \ 'arch': '',
-      \ 'gentoo': '',
-      \ 'ubuntu': '',
-      \ 'centos': '',
-      \ 'debian': '',
-      \ 'docker': '',
-      \ 'linux': '',
-      \}
+let g:nerdfont#platform#defaults = nerdfont#get_json('platform')
 
 function! nerdfont#platform#find(...) abort
   let n = a:0 ? a:1 : s:find_platform()

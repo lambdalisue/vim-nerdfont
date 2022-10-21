@@ -2,12 +2,12 @@ Describe nerdfont#path#extension
   Describe #find({path})
     It returns a code glyph for 'index.html'
       let glyph = nerdfont#path#extension#find('index.html')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns a JS glyph for 'index.js'
       let glyph = nerdfont#path#extension#find('index.js')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns a Ruby glyph for 'index.rb'
