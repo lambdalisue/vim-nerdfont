@@ -16,7 +16,7 @@ In otherwords, it is a fundemental plugin to handle [Nerd Fonts][] from Vim.
 [nerd fonts]: https://github.com/ryanoasis/nerd-fonts
 
 ![](https://user-images.githubusercontent.com/546312/88701008-6c1c5980-d144-11ea-8d6b-d4f4290274a6.png)
-*With fern.vim + fern-renderer-nerdfont.vim. All glyphs above were powered by this plugin*
+_With fern.vim + fern-renderer-nerdfont.vim. All glyphs above were powered by this plugin_
 
 ## Usage
 
@@ -53,11 +53,11 @@ See `:help nerdfont-function` to find glyphs for directory, fileformat, platform
 
 If you would like to add new glyph/filetype supports, see the following files
 
-| If                                                  | Where                                                                            |
-| --------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Want to add new extension (e.g. `.js`)              | [`autoload/nerdfont/path/extension.vim`](./autoload/nerdfont/path/extension.vim) |
-| Want to add new exact name (e.g. `Makefile`)        | [`autoload/nerdfont/path/basename.vim`](./autoload/nerdfont/path/basename.vim)   |
-| Want to add new complex pattern (e.g. `.*/bin/.*$`) | [`autoload/nerdfont/path/pattern.vim`](./autoload/nerdfont/path/pattern.vim)     |
+| If                                                  | Where                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| Want to add new extension (e.g. `.js`)              | [`assets/json/extension.json`](./assets/json/extension.json) |
+| Want to add new exact name (e.g. `Makefile`)        | [`assets/json/basename.json`](./assets/json/basename.json)   |
+| Want to add new complex pattern (e.g. `.*/bin/.*$`) | [`assets/json/pattern.json`](./assets/json/pattern.json)     |
 
 ## Integrations
 
