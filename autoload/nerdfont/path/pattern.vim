@@ -1,21 +1,9 @@
-scriptencoding utf-8
-
 let g:nerdfont#path#pattern#customs = get(g:, 'nerdfont#path#pattern#customs', {})
-let g:nerdfont#path#pattern#defaults = {
-      \ '.*angular.*\.js$'      : '',
-      \ '.*backbone.*\.js$'     : '',
-      \ '.*jquery.*\.js$'       : '',
-      \ '.*materialize.*\.css$' : '',
-      \ '.*materialize.*\.js$'  : '',
-      \ '.*mootools.*\.js$'     : '',
-      \ '.*require.*\.js$'      : '',
-      \ '.*vimrc.*'             : '',
-      \ 'Vagrantfile$'          : '',
-      \}
+let g:nerdfont#path#pattern#defaults = nerdfont#get_json('pattern')
 
 function! nerdfont#path#pattern#find(path) abort
   for [k, v] in s:m
-    if a:path =~# k
+    if a:path =~# '\m' . k
       return v
     endif
   endfor
