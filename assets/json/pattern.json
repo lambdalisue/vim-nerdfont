@@ -10,6 +10,8 @@
   "/codecov\\.ya\\?ml": "",
   "/Trash.$": "",
   "/Users.$": "",
+  "/\\cloudbuild\\.ya\\?ml$": "󱇶",
+  "/\\.gcloudignore$": "󱇶",
   "/\\.eslintrc\\(\\.\\(c\\?js\\|ya\\?ml\\|json\\)\\)\\?$": "󰱺",
   "/eslint\\.config\\.js?$": "󰱺",
   "/\\..*env$": "",
