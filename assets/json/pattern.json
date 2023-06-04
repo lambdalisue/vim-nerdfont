@@ -10,6 +10,8 @@
   "/codecov\\.ya\\?ml": "",
   "/Trash.$": "",
   "/Users.$": "",
+  "/\\.eslintrc\\(\\.\\(c\\?js\\|ya\\?ml\\|json\\)\\)\\?": "󰱺",
+  "/eslint\\.config\\.js?": "󰱺",
   "/\\.Trash-\\d\\+.$": "",
   "/\\.atom.$": "",
   "/\\.config.$": "",
