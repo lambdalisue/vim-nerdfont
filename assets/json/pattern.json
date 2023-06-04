@@ -14,7 +14,6 @@
   "/Trash.$": "",
   "/Users.$": "",
   "/\\cloudbuild\\.ya\\?ml$": "󱇶",
-  "/\\.gcloudignore$": "󱇶",
   "/\\.eslintrc\\(\\.\\(c\\?js\\|ya\\?ml\\|json\\)\\)\\?$": "󰱺",
   "/\\..*env$": "",
   "/\\.Trash-\\d\\+.$": "",
