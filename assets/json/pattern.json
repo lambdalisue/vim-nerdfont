@@ -1,6 +1,7 @@
 {
   ".*angular.*\\.js$": "",
   ".*backbone.*\\.js$": "",
+  ".*\\.d\\.ts$": "",
   ".*jquery.*\\.js$": "",
   ".*materialize.*\\.css$": "",
   ".*materialize.*\\.js$": "",
