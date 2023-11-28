@@ -36,3 +36,14 @@ endfunction
 
 let g:nerdfont#default = get(g:, 'nerdfont#default',
       \ g:nerdfont#path#extension#defaults['.'])
+
+if exists('*setcellwidths') && get(g:, 'nerdfont#autofix_cellwidths', 1)
+  try
+    call nerdfont#cellwidths#fix()
+  catch
+    echohl WarningMsg
+    echo '[nerdfont]: Failed to fix cellwidths of nerd font glyphs.'
+    echo '[nerdfont]: Disable this autofix feature by setting `g:nerdfont#autofix_cellwidths` to 0.'
+    echohl None
+  endtry
+endif

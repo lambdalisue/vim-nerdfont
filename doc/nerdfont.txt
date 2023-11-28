@@ -54,6 +54,10 @@ VARIABLE						*nerdfont-variable*
 >
 	let g:nerdfont#default = 'glyph for default path'
 <
+*g:nerdfont#autofix_cellwidths*
+	Automatically set cellwidth of nerdfont glyphs to 2. Disable it if you
+	faced font width issue.
+
 *g:nerdfont#directory#customs*
 	A custom glyph mappings for directory.
 >
