@@ -39,8 +39,8 @@ const g:nerdfont#cellwidths#code_points = {
 function! nerdfont#cellwidths#fix() abort
   let l:values = reduce(values(g:nerdfont#cellwidths#code_points), { a, v -> a + v })
   let l:values = map(l:values, {_, v -> type(v) is# v:t_list ? v : [v, v]})
-  let l:values = s:norm(l:values)
   let l:list = map(l:values, {_, v -> type(v) is# v:t_list ? v + [2] : [v, v, 2]})
+  let l:list = s:norm(l:list)
   call setcellwidths(l:list)
 endfunction
 
@@ -79,22 +79,24 @@ function! s:norm(ranges) abort
 endfunction
 
 function! s:merge(a, b) abort
-  if a:a[0] <= a:b[0] && a:b[1] <= a:a[1]
+  if a:a[2] != a:b[2]
+    return [a:a, a:b]
+  elseif a:a[0] <= a:b[0] && a:b[1] <= a:a[1]
     " a: -------------
     " b:      ------
-    return [[a:a[0], a:a[1]]]
+    return [[a:a[0], a:a[1], a:a[2]]]
   elseif a:b[0] <= a:a[0] && a:a[1] <= a:b[1]
     " a:      ------
     " b: -------------
-    return [[a:b[0], a:b[1]]]
+    return [[a:b[0], a:b[1], a:a[2]]]
   elseif a:a[0] <= a:b[0] && a:b[0] <= a:a[1]
     " a: --------
     " b:      ------
-    return [[a:a[0], max([a:a[1], a:b[1]])]]
+    return [[a:a[0], max([a:a[1], a:b[1]]), a:a[2]]]
   elseif a:b[0] <= a:a[0] && a:a[0] <= a:b[1]
     " a:      ------
     " b: --------
-    return [[a:b[0], max([a:a[1], a:b[1]])]]
+    return [[a:b[0], max([a:a[1], a:b[1]]), a:a[2]]]
   endif
   return [a:a, a:b]
 endfunction
