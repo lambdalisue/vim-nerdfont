@@ -40,7 +40,7 @@ function! nerdfont#cellwidths#fix() abort
   let l:values = reduce(values(g:nerdfont#cellwidths#code_points), { a, v -> a + v })
   let l:values = map(l:values, {_, v -> type(v) is# v:t_list ? v : [v, v]})
   let l:list = map(l:values, {_, v -> type(v) is# v:t_list ? v + [2] : [v, v, 2]})
-  let l:list = s:norm(l:list)
+  let l:list = s:norm(l:list + getcellwidths())
   call setcellwidths(l:list)
 endfunction
 
