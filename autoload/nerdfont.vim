@@ -36,7 +36,7 @@ function! nerdfont#find(...) abort
 endfunction
 
 function! s:autofix(result) abort
-  if exists('*setcellwidths') && get(g:, 'nerdfont#autofix_cellwidths', 1)
+  if exists('*setcellwidths') && get(g:, 'nerdfont#autofix_cellwidths', 0)
     try
       let l:code_points = map(values(a:result), {_, v -> char2nr(v)})
       let l:code_points = filter(l:code_points, {_, v -> v > 0x80})
