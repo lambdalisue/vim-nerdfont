@@ -32,6 +32,8 @@ function! s:find_distro() abort
     let result = system('lsb_release -i')
     if result =~# 'Arch'
       return 'arch'
+    elseif result =~# 'NixOS'
+      return 'nixos'
     elseif result =~# 'Gentoo'
       return 'gentoo'
     elseif result =~# 'Ubuntu'
