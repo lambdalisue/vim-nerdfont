@@ -35,5 +35,6 @@
   "/prettier\\.config\\.c\\?js?$": "󰏣",
   "/sbin.$": "",
   "/xbin.$": "",
-  "Vagrantfile$": ""
+  "Vagrantfile$": "",
+  "docker-compose\\..*\\.yml": ""
 }
