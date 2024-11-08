@@ -7,12 +7,12 @@ Describe nerdfont#platform
 
     It returns an apple glyph for 'macos'
       let glyph = nerdfont#platform#find('macos')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns a linux glyph for 'linux'
       let glyph = nerdfont#platform#find('linux')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns an empty string for 'hogehogefoobar'
