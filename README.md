@@ -1,7 +1,7 @@
 # 👓 nerdfont.vim
 
-![Support Vim 8.1 or above](https://img.shields.io/badge/support-Vim%208.1%20or%20above-yellowgreen.svg)
-![Support Neovim 0.4 or above](https://img.shields.io/badge/support-Neovim%200.4%20or%20above-yellowgreen.svg)
+![Support Vim 8.2.5136 or above](https://img.shields.io/badge/support-Vim%208.2.5136%20or%20above-yellowgreen.svg)
+![Support Neovim 0.4.4 or above](https://img.shields.io/badge/support-Neovim%200.4.4%20or%20above-yellowgreen.svg)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Doc](https://img.shields.io/badge/doc-%3Ah%20nerdfont-orange.svg)](doc/nerdfont.txt)
 
