@@ -1,8 +1,9 @@
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
-let s:json_dir = s:path . '/assets/json'
+let s:sep = has('win32') ? '\' : '/'
+let s:json_dir = join([s:path, 'assets', 'json'], s:sep)
 
 function! nerdfont#get_json(json_name) abort
-  let l:json = s:json_dir . '/' . a:json_name . '.json'
+  let l:json = join([s:json_dir, a:json_name . '.json'], s:sep)
   let l:result = json_decode(join(readfile(l:json), ''))
   call s:autofix(l:result)
   return l:result
