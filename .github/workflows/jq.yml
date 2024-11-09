@@ -1,5 +1,5 @@
----
-# yamllint disable-line rule:truthy
+name: JSON check
+
 on:
   push:
     paths:
@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Check if a json is sorted
         run: |
           for json in assets/json/*.json ; do
