@@ -6,8 +6,8 @@
 [![Doc](https://img.shields.io/badge/doc-%3Ah%20nerdfont-orange.svg)](doc/nerdfont.txt)
 
 [![reviewdog](https://github.com/lambdalisue/nerdfont.vim/workflows/reviewdog/badge.svg)](https://github.com/lambdalisue/nerdfont.vim/actions?query=workflow%3Areviewdog)
-[![vim](https://github.com/lambdalisue/nerdfont.vim/workflows/vim/badge.svg)](https://github.com/lambdalisue/nerdfont.vim/actions?query=workflow%3Avim)
-[![neovim](https://github.com/lambdalisue/nerdfont.vim/workflows/neovim/badge.svg)](https://github.com/lambdalisue/nerdfont.vim/actions?query=workflow%3Aneovim)
+[![Vim](https://github.com/lambdalisue/vim-nerdfont/actions/workflows/vim.yml/badge.svg)](https://github.com/lambdalisue/vim-nerdfont/actions/workflows/vim.yml)
+[![Neovim](https://github.com/lambdalisue/vim-nerdfont/actions/workflows/neovim.yml/badge.svg)](https://github.com/lambdalisue/vim-nerdfont/actions/workflows/neovim.yml)
 
 A simplified version of [vim-devicons][] which does NOT provide any 3rd party integrations in itself.
 In otherwords, it is a fundemental plugin to handle [Nerd Fonts][] from Vim.
