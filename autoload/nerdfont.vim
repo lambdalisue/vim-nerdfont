@@ -33,9 +33,7 @@ function! nerdfont#find(...) abort
     return glyph
   endif
 
-  return exists('g:nerdfont#default')
-        \ ? g:nerdfont#default
-        \ : nerdfont#path#extension#defaults['.']
+  return g:nerdfont#default
 endfunction
 
 function! s:autofix(result) abort
@@ -53,3 +51,7 @@ function! s:autofix(result) abort
     endtry
   endif
 endfunction
+
+let g:nerdfont#default = get(g:, 'nerdfont#default',
+      \ g:nerdfont#path#extension#defaults['.'])
+
