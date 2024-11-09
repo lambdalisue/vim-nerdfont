@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 let s:sep = has('win32') ? '\' : '/'
 let s:json_dir = join([s:path, 'assets', 'json'], s:sep)
@@ -52,6 +54,4 @@ function! s:autofix(result) abort
   endif
 endfunction
 
-let g:nerdfont#default = get(g:, 'nerdfont#default',
-      \ g:nerdfont#path#extension#defaults['.'])
-
+let g:nerdfont#default = get(g:, 'nerdfont#default', '')
