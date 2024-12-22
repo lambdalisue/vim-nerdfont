@@ -1,5 +1,5 @@
 let g:nerdfont#path#extension#customs = get(g:, 'nerdfont#path#extension#customs', {})
-let g:nerdfont#path#extension#defaults = nerdfont#get_json('extension')
+let g:nerdfont#path#extension#defaults = extend(nerdfont#get_json('extension'), nerdfont#get_json('extra/basename'))
 
 function! nerdfont#path#extension#find(path) abort
   let n = tolower(fnamemodify(a:path, ':e'))

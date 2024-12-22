@@ -1,5 +1,5 @@
 let g:nerdfont#path#pattern#customs = get(g:, 'nerdfont#path#pattern#customs', {})
-let g:nerdfont#path#pattern#defaults = nerdfont#get_json('pattern')
+let g:nerdfont#path#pattern#defaults = extend(nerdfont#get_json('pattern'), nerdfont#get_json('extra/pattern'))
 
 function! nerdfont#path#pattern#find(path) abort
   for [k, v] in s:m
