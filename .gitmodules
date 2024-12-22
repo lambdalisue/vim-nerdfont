@@ -1,0 +1,3 @@
+[submodule "eza"]
+	path = eza
+	url = https://github.com/eza-community/eza
