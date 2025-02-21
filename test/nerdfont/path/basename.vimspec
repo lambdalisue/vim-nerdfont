@@ -7,12 +7,12 @@ Describe nerdfont#path#basename
 
     It returns a Docker glyph for 'dockerfile'
       let glyph = nerdfont#path#basename#find('dockerfile')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns a Key glyph for 'license'
       let glyph = nerdfont#path#basename#find('license')
-      Assert Equals(glyph, '')
+      Assert Equals(glyph, '')
     End
 
     It returns an empty string for 'hogehogefoobar'
