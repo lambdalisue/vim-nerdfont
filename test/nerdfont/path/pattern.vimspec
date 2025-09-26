@@ -15,6 +15,23 @@ Describe nerdfont#path#pattern
       Assert Equals(glyph, '')
     End
 
+    It returns a Vagrant glyph for 'Vagrantfile' stored under a vimrc path
+      let glyph = nerdfont#path#pattern#find('vimrc-modules/Vagrantfile')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Vagrant glyph for 'Vagrantfile' stored under a Windows vimrc path
+      let glyph = nerdfont#path#pattern#find('vimrc-modules\Vagrantfile')
+      Assert Equals(glyph, '')
+    End
+
+    It returns a Vim glyph for vimrc patterns
+      let glyph = nerdfont#path#pattern#find('vimrc-whatever')
+      Assert Equals(glyph, '')
+      let glyph = nerdfont#path#pattern#find('.vimrc')
+      Assert Equals(glyph, '')
+    End
+
     It returns an empty string for 'hogehogefoobar'
       let glyph = nerdfont#path#pattern#find('hogehogefoobar')
       Assert Equals(glyph, '')
