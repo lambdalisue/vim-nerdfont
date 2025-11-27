@@ -29,8 +29,8 @@ function! s:find_platform() abort
     let s:platform = 'freebsd'
     return s:platform
   endif
-  " https://wiki.termux.com/wiki/Differences_from_Linux
-  if $PREFIX ==# '/data/data/com.termux/files/usr'
+  " https://github.com/tox-dev/platformdirs/blob/4.5.0/src/platformdirs/__init__.py#L31
+  if $ANDROID_DATA ==# '/data' && $ANDROID_ROOT ==# '/system'
     let s:platform = 'android'
     return s:platform
   endif
