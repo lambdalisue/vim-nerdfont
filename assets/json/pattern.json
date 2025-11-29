@@ -7,7 +7,7 @@
   ".*materialize.*\\.js$": "",
   ".*mootools.*\\.js$": "",
   ".*require.*\\.js$": "",
-  ".*vimrc.*": "",
+  ".*vimrc[^/]*$": "",
   "/Contacts\\.$": "󰉌",
   "/Desktop\\.$": "",
   "/Downloads\\.$": "󰉍",
