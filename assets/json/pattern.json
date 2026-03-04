@@ -67,5 +67,6 @@
   "/xbin.$": "",
   "/xbps\\.d.$": "",
   "/xorg\\.conf.d.$": "",
-  "Vagrantfile$": ""
+  "Vagrantfile$": "",
+  "^zhihu://": ""
 }
