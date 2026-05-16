@@ -29,6 +29,10 @@ function! s:find_platform() abort
     let s:platform = 'freebsd'
     return s:platform
   endif
+  if has('qnx')
+    let s:platform = 'qnx'
+    return s:platform
+  endif
   " https://github.com/tox-dev/platformdirs/blob/4.5.0/src/platformdirs/__init__.py#L31
   if $ANDROID_DATA ==# '/data' && $ANDROID_ROOT ==# '/system'
     let s:platform = 'android'
