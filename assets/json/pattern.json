@@ -56,6 +56,10 @@
   "/lib32.$": "",
   "/lib64.$": "",
   "/libexec.$": "",
+  "/mutt.$": "󰛮",
+  "/muttrc": "󰛮",
+  "/neomutt.$": "󰛮",
+  "/neomuttrc": "󰛮",
   "/node_modules.$": "",
   "/node_modules\\.$": "",
   "/npm_cache\\.$": "",
@@ -68,5 +72,7 @@
   "/xbps\\.d.$": "",
   "/xorg\\.conf.d.$": "",
   "Vagrantfile$": "",
-  "^zhihu://": ""
+  "^zhihu://": "",
+  "mutt-": "󰻣",
+  "neomutt-": "󰻣"
 }
